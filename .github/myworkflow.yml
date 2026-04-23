@@ -7,3 +7,17 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello World"
+      - name: Print Hello World Again
+        run: echo "Hello World Again"
+
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  print:
+    runs-on: macOS-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello World"
+      - name: Print Hello World Again 
+        run: echo "Hello World Again"
