@@ -25,3 +25,14 @@ jobs:
         run: echo "Hello World"
       - name: Print Hello World Again 
         run: echo "Hello World Again"
+jobs:
+  print:
+    runs-on: macOS-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
