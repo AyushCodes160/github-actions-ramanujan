@@ -32,6 +32,8 @@ jobs:
       run:
         working-directory: backend
     steps:
+      - name: Repo clone
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: npm ci
       - name: Run tests
